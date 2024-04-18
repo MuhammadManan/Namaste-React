@@ -1,0 +1,22 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadManan/Namaste-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuhammadManan/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/MuhammadManan/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
