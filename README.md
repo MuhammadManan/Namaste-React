@@ -19,3 +19,17 @@
 - HTTPs
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
+
+# fun Fact
+
+- JSX is HTML & XML like syntax but not html || xml
+
+# JSX
+
+- write attribute in camelCase in JSX
+
+# Cycle of conversion
+
+    transpiled by Bable                                                                                React itself
+
+JSX ===================> React.createElement ( in a react code) =======================> JS - Object ===========> HTMLElement( when it is render).

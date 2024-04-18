@@ -10,17 +10,10 @@ const heading = React.createElement(
   "Hello World from the OP React!"
 );
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, " You're learning an React!"),
-    React.createElement("h2", {}, " It's an amazing journey!"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h3", {}, " I'm an H3 tag!"),
-    React.createElement("h4", {}, " I'm an H4 tag!"),
-  ]),
-]);
+// create Element using JSX
 
-console.log(parent);
+const jsxHeading = <h1 id="heading">Element of React using JSX.</h1>;
+
+console.log(jsxHeading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(jsxHeading);
