@@ -12,7 +12,7 @@ const heading = React.createElement(
 
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, " You're learning React!"),
+    React.createElement("h1", {}, " You're learning an React!"),
     React.createElement("h2", {}, " It's an amazing journey!"),
   ]),
   React.createElement("div", { id: "child2" }, [
