@@ -27,9 +27,11 @@
 # JSX
 
 - write attribute in camelCase in JSX
+- {JSX} prevents from Cross siting attack because it sanitizes the data first.
 
 # Cycle of conversion
 
     transpiled by Bable                                                                                React itself
 
-JSX ===================> React.createElement ( in a react code) =======================> JS - Object ===========> HTMLElement( when it is render).
+- JSX ===================> React.createElement ( in a react code) =======================> JS - Object ===========> HTMLElement( when it is render).
+- React component => Normal Js function
