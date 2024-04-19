@@ -45,7 +45,7 @@
 
 .resCard-container {
   width: 200px;
-  height: 310px;
+  height: 330px;
   margin: 5px;
   padding: 5px;
   background-color: whitesmoke;
@@ -64,8 +64,11 @@
 }
 
 .desc-container > h3 {
-  margin: 4px;
+  margin: 3px;
 }
 .desc-container > h4 {
-  margin: 2px;
+  /* font-size: 14px; */
+  font-weight: 400;
+  word-spacing: 2px;
+  margin: 3px;
 }
