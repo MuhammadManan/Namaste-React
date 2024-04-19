@@ -20,8 +20,12 @@ const Header = () => {
 };
 
 const RestaurantCard = (props) => {
+  // console.log(props);
   const { resData } = props;
-  // console.log(resData.info.cloudinaryImageId);
+
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
+    resData?.info;
+  const { deliveryTime } = resData?.info?.sla;
   return (
     <div className="resCard-container">
       <div className="image-container">
@@ -34,11 +38,13 @@ const RestaurantCard = (props) => {
         />
       </div>
       <div className="desc-container">
-        <h3>{resData.info.name}</h3>
-        <h4>{resData.info.cuisines.join(", ")}</h4>
-        <h4>{resData.info.avgRating} stars</h4>
-        <h4>{resData.info.sla.deliveryTime} minutes</h4>
-        <h4>{resData.info.costForTwo}</h4>
+        <h3>{name}</h3>
+        <h4>{cuisines.join(", ")}</h4>
+        <h4>
+          <span id="rate">{avgRating}</span> stars
+        </h4>
+        <h4>{deliveryTime} minutes</h4>
+        <h4>{costForTwo}</h4>
       </div>
     </div>
   );
@@ -1573,15 +1579,9 @@ const Body = () => {
     <div className="body-container">
       <div className="search-container">Search</div>
       <div className="res-container">
-        <RestaurantCard resData={resList[0]} />
-        {/* <RestaurantCard
-          resName="Sizzle & Spice Bistro"
-          cuisine="American, Mediterranean, Japanese, French cuisine"
-        />
-        <RestaurantCard
-          resName="Flavors of the World"
-          cuisine="Chinese, Greek, Brazilian, Lebanese cuisine"
-        /> */}
+        {resList.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+        ))}
       </div>
     </div>
   );

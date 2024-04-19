@@ -45,7 +45,7 @@
 
 .resCard-container {
   width: 200px;
-  height: 330px;
+  /* height: 330px; */
   margin: 5px;
   padding: 5px;
   background-color: whitesmoke;
@@ -71,4 +71,7 @@
   font-weight: 400;
   word-spacing: 2px;
   margin: 3px;
+}
+#rate {
+  font-weight: bold;
 }
