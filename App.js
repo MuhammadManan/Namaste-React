@@ -19,7 +19,8 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="resCard-container">
       <div className="image-container">
@@ -29,8 +30,8 @@ const RestaurantCard = () => {
         />
       </div>
       <div className="desc-container">
-        <h3>Meghanan Foods</h3>
-        <h4>Biryani, North Indian, Asian</h4>
+        <h3>{props.resName}</h3>
+        <h4>{props.cuisine}</h4>
         <h4>4.4 stars</h4>
         <h4>38 minutes</h4>
       </div>
@@ -43,34 +44,18 @@ const Body = () => {
     <div className="body-container">
       <div className="search-container">Search</div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard
+          resName="The Spice Garden"
+          cuisine="Indian, Thai, Mexican, Italian cuisine"
+        />
+        <RestaurantCard
+          resName="Sizzle & Spice Bistro"
+          cuisine="American, Mediterranean, Japanese, French cuisine"
+        />
+        <RestaurantCard
+          resName="Flavors of the World"
+          cuisine="Chinese, Greek, Brazilian, Lebanese cuisine"
+        />
       </div>
     </div>
   );

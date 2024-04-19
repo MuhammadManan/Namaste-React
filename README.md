@@ -35,3 +35,9 @@
 
 - JSX ===================> React.createElement ( in a react code) =======================> JS - Object ===========> HTMLElement( when it is render).
 - React component => Normal Js function
+
+# Props
+
+- It is just normal argument to a function.
+- passing a argument to a function same as passing a props to a React Component.
+  -Destructing on the fly.
