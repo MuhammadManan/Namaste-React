@@ -19,8 +19,8 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = (props) => {
-  console.log(props);
+const RestaurantCard = ({ resName, cuisine }) => {
+  // console.log(props);
   return (
     <div className="resCard-container">
       <div className="image-container">
@@ -30,8 +30,8 @@ const RestaurantCard = (props) => {
         />
       </div>
       <div className="desc-container">
-        <h3>{props.resName}</h3>
-        <h4>{props.cuisine}</h4>
+        <h3>{resName}</h3>
+        <h4>{cuisine}</h4>
         <h4>4.4 stars</h4>
         <h4>38 minutes</h4>
       </div>
