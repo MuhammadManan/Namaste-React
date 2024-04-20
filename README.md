@@ -90,7 +90,7 @@
 - (Normal Js utility function)
 
   - useState() - use to give superpower to state variable
-  - useEffect()
+  - useEffect() : is called after the component Render
 
 - whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.
 
