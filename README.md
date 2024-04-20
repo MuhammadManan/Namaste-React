@@ -41,3 +41,23 @@
 - It is just normal argument to a function.
 - passing a argument to a function same as passing a props to a React Component.
   -Destructing on the fly.
+
+# Namaste food Order Planning
+
+/\*\*
+
+- Header
+- - logo
+- - Nav items
+- Body
+- -Search
+- -RestaurantContainer
+-     - RestaurantCard
+-     - Img
+-     - Name of Res, Star Ratings, cuisine, delivery time
+- Footer
+- - Copyright
+- - Links
+- - Address
+- - Contact
+    \*/
