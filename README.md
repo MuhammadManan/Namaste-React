@@ -76,6 +76,7 @@
 - UI and Data layer work and sync properly with each other
 - React is good at DOM Operations
 - React is Effecient in DOM Manipulation because have Virtual DOM
+- React Render UI | Render cycle is very fast.
 
 # Reconciliation
 
@@ -92,3 +93,8 @@
   - useEffect()
 
 - whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.
+
+# API Approach for UI
+
+- Ist way: Loads-> Api call -> Render
+- 2nd way: Loads -> Render -> Api call -> Render (Better UX)
