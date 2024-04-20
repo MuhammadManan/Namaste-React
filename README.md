@@ -61,3 +61,34 @@
 - - Address
 - - Contact
     \*/
+
+# config Driven UI
+
+- UI is driven/displayed on the basis of config which is sent by database.
+
+# Export/Import
+
+- Named import/export
+- Default import/export
+
+# React uniqueness
+
+- UI and Data layer work and sync properly with each other
+- React is good at DOM Operations
+- React is Effecient in DOM Manipulation because have Virtual DOM
+
+# Reconciliation
+
+- Using Reconciliation Algo Process( React Fiber )
+- Having Virtual DOM: representation of Actual DOM - Virtual DOM is nothing, just a normal JS Object ( React Component )
+- Using Diff Algo which find the difference btw old and new virtaul DOM
+- then update the UI.
+
+# React Hook
+
+- (Normal Js utility function)
+
+  - useState() - use to give superpower to state variable
+  - useEffect()
+
+- whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.

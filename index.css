@@ -30,8 +30,8 @@
   border: 2px solid black;
 }
 
-.search-container {
-  border: 2px solid black;
+.filter-container {
+  /* border: 2px solid black; */
   margin: 15px 15px 0 15px;
   padding: 5px;
 }
