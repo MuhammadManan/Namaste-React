@@ -98,3 +98,11 @@
 
 - Ist way: Loads-> Api call -> Render
 - 2nd way: Loads -> Render -> Api call -> Render (Better UX)
+
+# shimmer UI
+
+- resembles the page's actual UI
+
+# CORS Plugin
+
+- use for get the data to other domain from your browser domain

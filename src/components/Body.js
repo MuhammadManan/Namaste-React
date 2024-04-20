@@ -1,5 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer.js";
 import { useState, useEffect } from "react";
+import { api_URL } from "../utils/constants.js";
 
 export const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -10,9 +12,7 @@ export const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const restaurantApiData = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9690247&lng=72.8205292&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const restaurantApiData = await fetch(api_URL);
 
     const data = await restaurantApiData.json();
     // console.log(data);
@@ -21,6 +21,11 @@ export const Body = () => {
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  // Conditional Rendering
+  if (restaurantList.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body-container">
