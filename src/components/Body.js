@@ -23,17 +23,20 @@ export const Body = () => {
   };
 
   // Conditional Rendering
-  if (restaurantList.length === 0) {
-    return <Shimmer />;
-  }
+  // if (restaurantList.length === 0) {
+  //   return <Shimmer />;
+  // }
 
-  return (
+  return restaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body-container">
       <div className="filter-container">
         <button
+          className="topRate-Btn"
           onClick={() => {
             const filteredList = restaurantList.filter(
-              (res) => res.info.avgRating === 4.3
+              (res) => res.info.avgRating > 4.5
             );
             setRestaurantList(filteredList);
           }}
