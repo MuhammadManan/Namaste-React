@@ -5,9 +5,8 @@ import { api_URL } from "../utils/constants.js";
 
 export const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
-  // console.log(restaurantList);
+  const [filterData, setFilterData] = useState([]);
   const [searchText, setSearchText] = useState("");
-  // console.log(searchText);
 
   useEffect(() => {
     fetchData();
@@ -23,7 +22,9 @@ export const Body = () => {
     setRestaurantList(
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    // console.log("fetchAPi");
+    setFilterData(
+      data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   return restaurantList.length === 0 ? (
@@ -56,13 +57,13 @@ export const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              const output = restaurantList.filter((res) => {
+              const filterOutput = restaurantList.filter((res) => {
                 // console.log(res.info.name.toLowerCase());
                 return res.info.name
                   .toLowerCase()
                   .includes(searchText.toLowerCase());
               });
-              setRestaurantList(output);
+              setFilterData(filterOutput);
             }}
           >
             Search
@@ -70,7 +71,7 @@ export const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        {restaurantList.map((restaurant) => (
+        {filterData.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
