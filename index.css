@@ -130,16 +130,44 @@ html {
   font-weight: bold;
 }
 
-.top-rateContainer {
-  margin: 15px 80% 15px 55px;
-  height: 25px;
-  width: 200px;
+.searchRate-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 90px 0 55px;
   padding: 5px;
-  /* border: 2px solid black; */
-  background-color: #f0f0f0;
-  border-radius: 10px;
 }
 
+.top-rateContainer {
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  width: 200px;
+  height: 25px;
+}
+
+.search-container {
+  display: flex;
+  margin-right: 10px;
+}
+.searchBar {
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  cursor: pointer;
+  width: 250px;
+  height: 25px;
+}
+.searchBtn {
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  width: 80px;
+  height: 25px;
+}
 .shimmer-container {
   display: flex;
   flex-wrap: wrap;

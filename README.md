@@ -113,3 +113,8 @@ note:
 # CORS Plugin
 
 - use for get the data to other domain from your browser domain
+- use corsproxy.io server for production your web
+
+# Route
+
+- whenever you develop routes, you have to create routing configuration.
