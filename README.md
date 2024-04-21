@@ -94,9 +94,11 @@ note:
 - (Normal Js utility function)
 
   - useState() - use to give superpower to state variable
-  - useEffect() : is called after the component Render
-
-- whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.
+    - whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.
+  - useEffect() : is called after the component Render (- dependency array change the behavior of useEffect)
+    - if no dependency array => useEffect is called on every rendering of the component
+    - if dependency array is empty = [] => useEffect is called only on initial render and just once time.
+    - if dependency array is having something Like [loginBtn] => useEffect is called, everytime the loginBtn is updated
 
 # API Approach for UI
 

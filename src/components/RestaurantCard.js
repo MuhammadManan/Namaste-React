@@ -1,7 +1,6 @@
 import { media_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-  // console.log(props);
   const { resData } = props;
 
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
@@ -10,14 +9,7 @@ const RestaurantCard = (props) => {
   return (
     <div className="resCard-container">
       <div className="image-container">
-        <img
-          alt="Chinese"
-          src={ 
-            media_URL
-             +
-            resData.info.cloudinaryImageId
-          }
-        />
+        <img alt="Chinese" src={media_URL + resData.info.cloudinaryImageId} />
       </div>
       <div className="desc-container">
         <h3>{name}</h3>

@@ -15,10 +15,7 @@ export const Body = () => {
 
   const fetchData = async () => {
     const restaurantApiData = await fetch(api_URL);
-
     const data = await restaurantApiData.json();
-    // console.log(data);
-
     setRestaurantList(
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -36,9 +33,9 @@ export const Body = () => {
           className="topRate-Btn"
           onClick={() => {
             const filteredList = restaurantList.filter(
-              (res) => res.info.avgRating > 4
+              (res) => res.info.avgRating > 4.5
             );
-            setRestaurantList(filteredList);
+            setFilterData(filteredList);
           }}
         >
           Top Rated Restaurant
@@ -58,7 +55,6 @@ export const Body = () => {
             className="search-btn"
             onClick={() => {
               const filterOutput = restaurantList.filter((res) => {
-                // console.log(res.info.name.toLowerCase());
                 return res.info.name
                   .toLowerCase()
                   .includes(searchText.toLowerCase());
