@@ -81,9 +81,13 @@
 # Reconciliation
 
 - Using Reconciliation Algo Process( React Fiber )
-- Having Virtual DOM: representation of Actual DOM - Virtual DOM is nothing, just a normal JS Object ( React Component )
+- Having Virtual DOM: Object-representation of Actual DOM - Virtual DOM is nothing, just a normal JS Object ( React Component )
 - Using Diff Algo which find the difference btw old and new virtaul DOM
 - then update the UI.
+
+note:
+
+- whenever state variables update, react triggers a reconciliation cycle(re-renders the component).
 
 # React Hook
 

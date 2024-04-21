@@ -39,6 +39,7 @@ html {
 }
 .login-Btn {
   font-size: 15px;
+  cursor: pointer;
   font-weight: 700;
 }
 
@@ -51,7 +52,9 @@ html {
 
 .filter-container {
   /* border: 2px solid black; */
-  margin: 15px 15px 0 55px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 90px 0 55px;
   padding: 5px;
 }
 
@@ -61,6 +64,27 @@ html {
   font-size: 18px;
   font-weight: bold;
   padding: 5px;
+  cursor: pointer;
+  /* color: white; */
+  /* background-color: #c99c9c; */
+}
+
+.search-bar {
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 18px;
+  font-weight: 600px;
+  padding: 5px;
+  cursor: pointer;
+}
+.search-btn {
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 .res-container {
   display: flex;
