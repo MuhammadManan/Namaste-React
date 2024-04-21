@@ -93,7 +93,8 @@ note:
 
 - (Normal Js utility function)
 
-  - useState() - use to give superpower to state variable
+  - useState() - use to give superpower to create local state variable, never create outside the component.
+    - never create usestate() hook inside the if/else.(conditioin).
     - whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.
   - useEffect() : is called after the component Render (- dependency array change the behavior of useEffect)
     - if no dependency array => useEffect is called on every rendering of the component
