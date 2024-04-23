@@ -95,6 +95,8 @@ note:
 
   - useState() - use to give superpower to create local state variable, never create outside the component.
     - never create usestate() hook inside the if/else.(conditioin).
+      - nor inside in loop
+      - nor inside in function.
     - whenever a State variable updates, react re-renders the component because React keep an eye on the State variable | track it.
   - useEffect() : is called after the component Render (- dependency array change the behavior of useEffect)
     - if no dependency array => useEffect is called on every rendering of the component
@@ -131,6 +133,9 @@ note:
 - Outlet: use to fill the gap of children route and take that component and replace.
   - basically, it is replaced by the children Component.
 - use Link Component instead of anchor tage, it provide same functionality like anchor but doesn't reload the whole page, just render the component.
+  - Link is the wraper of anchor tag
+  - And React-Router-Dom track it through the Link that's helpful to render the specific component without reload the whole page.
+- useParams: it read the param from the url
 
 # Note
 
