@@ -146,3 +146,14 @@ note:
 
 - client side routing: everything is loaded at first time, just the component are reload(render) on the base of route <That's why it's a single page application in React>
 - Server side routing: where the whole page is re-render/ reload on the requested route.
+
+# Class Component
+
+- Class based component: At the end of the Day, it's normal JS class.
+- and extends it with React.Component
+
+# Functional vs Class
+
+- the major diff is that the render() return the piece of JSX in Class Component
+- Receive the props through the constructor and also call the super by passing it here always.
+- then we get the props and use them with the "this" in the component.

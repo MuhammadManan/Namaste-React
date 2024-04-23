@@ -35,8 +35,9 @@ export const Body = () => {
           className="topRate-Btn"
           onClick={() => {
             const filteredList = restaurantList.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res.info.avgRating > 4
             );
+            console.log(filteredList);
             setFilterData(filteredList);
           }}
         >
