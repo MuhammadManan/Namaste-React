@@ -118,3 +118,26 @@ note:
 # Route
 
 - whenever you develop routes, you have to create routing configuration.
+
+# React-Router-DOM
+
+- createBrowserRoute: use to config the route of our app
+- useRouterError: use to tell extra info about if the route mismatch or get error
+- RouterProvider:
+  -define and manage routing behavior within a React application,
+
+  - use a specified router object to control navigation and rendering of components based on the current URL
+
+- Outlet: use to fill the gap of children route and take that component and replace.
+  - basically, it is replaced by the children Component.
+- use Link Component instead of anchor tage, it provide same functionality like anchor but doesn't reload the whole page, just render the component.
+
+# Note
+
+- never ever use anchor tag to route on another page, if you do, then it reload the whole page such as HeaderComponent.
+- React is a single page application | UI because it doesn't reload the whole page
+
+# 2 types of Routing
+
+- client side routing: everything is loaded at first time, just the component are reload(render) on the base of route <That's why it's a single page application in React>
+- Server side routing: where the whole page is re-render/ reload on the requested route.
