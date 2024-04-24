@@ -151,9 +151,13 @@ note:
 
 - Class based component: At the end of the Day, it's normal JS class.
 - and extends it with React.Component
+- Note: loading a class based component on a web page means creating an instance of that class
+  - whenever creating the instance of a class, the constructor is called.
+  - and the constructor is the best place to receive props and create state variable.
+  - this.state is a big Object which contains all the state variable
 
 # Functional vs Class
 
 - the major diff is that the render() return the piece of JSX in Class Component
 - Receive the props through the constructor and also call the super by passing it here always.
-- then we get the props and use them with the "this" in the component.
+- then we get the props and use them with the "this" keyword in the component.
