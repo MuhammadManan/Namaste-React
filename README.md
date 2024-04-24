@@ -155,6 +155,7 @@ note:
   - whenever creating the instance of a class, the constructor is called.
   - and the constructor is the best place to receive props and create state variable.
   - this.state is a big Object which contains all the state variable
+  - Never ever Update state variable directly such as (this.state.count++).It Create inconsistency in your program.
 
 # Functional vs Class
 
