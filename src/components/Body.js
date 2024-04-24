@@ -17,13 +17,23 @@ export const Body = () => {
   const fetchData = async () => {
     const restaurantApiData = await fetch(api_URL);
     const data = await restaurantApiData.json();
-    console.log(data);
+    // console.log(data);
     setRestaurantList(
-      data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilterData(
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    // console.log(
+    //   "data:",
+    //   data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    // );
+    const dataCheck =
+      data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+    for (let i = 0; i < dataCheck.length; i++) {
+      console.log(`Data ${i} : ${dataCheck[i]?.info?.name} `);
+    }
   };
 
   return restaurantList.length === 0 ? (
@@ -37,7 +47,7 @@ export const Body = () => {
             const filteredList = restaurantList.filter(
               (res) => res.info.avgRating > 4
             );
-            console.log(filteredList);
+            // console.log(filteredList);
             setFilterData(filteredList);
           }}
         >
@@ -58,10 +68,12 @@ export const Body = () => {
             className="search-btn"
             onClick={() => {
               const filterOutput = restaurantList.filter((res) => {
-                return res.info.name
+                console.log(res?.info?.name);
+                return res?.info?.name
                   .toLowerCase()
                   .includes(searchText.toLowerCase());
               });
+              console.log("FilterOuput", filterOutput);
               setFilterData(filterOutput);
             }}
           >
