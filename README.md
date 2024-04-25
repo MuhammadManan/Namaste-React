@@ -152,10 +152,35 @@ note:
 - Class based component: At the end of the Day, it's normal JS class.
 - and extends it with React.Component
 - Note: loading a class based component on a web page means creating an instance of that class
+
   - whenever creating the instance of a class, the constructor is called.
   - and the constructor is the best place to receive props and create state variable.
   - this.state is a big Object which contains all the state variable
   - Never ever Update state variable directly such as (this.state.count++).It Create inconsistency in your program.
+
+  # Life Cycle:
+
+  - when the class component is called
+  - a new instance of class is created
+  - then the constructor is called and in the constructor <super()> is called
+  - then the render() component is called
+  - once the mounting of a component is finished then the componentDidMount is called
+
+  # Parent-Child relationship calling lifeCycle
+
+  - parent class is called and instance is created
+  - Parent constructor is called
+  - Parent Render() is called if child is in the parent rendering component then
+  - Child class is called
+  - Child constructor is called
+  - Child Render() is called
+  - once the child mounting is complete then child DidComponentMount is called
+  - At last, the Parent DidComponentMount() is called
+
+  # Note:
+
+  - DidComponentMount() ===== useEffect()
+  - use for APIs call
 
 # Functional vs Class
 

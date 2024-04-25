@@ -28,12 +28,12 @@ export const Body = () => {
     //   "data:",
     //   data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     // );
-    const dataCheck =
-      data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-    for (let i = 0; i < dataCheck.length; i++) {
-      console.log(`Data ${i} : ${dataCheck[i]?.info?.name} `);
-    }
+    // const dataCheck =
+    //   data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+    //     ?.restaurants;
+    // for (let i = 0; i < dataCheck.length; i++) {
+    //   console.log(`Data ${i} : ${dataCheck[i]?.info?.name} `);
+    // }
   };
 
   return restaurantList.length === 0 ? (
@@ -68,12 +68,12 @@ export const Body = () => {
             className="search-btn"
             onClick={() => {
               const filterOutput = restaurantList.filter((res) => {
-                console.log(res?.info?.name);
+                // console.log(res?.info?.name);
                 return res?.info?.name
                   .toLowerCase()
                   .includes(searchText.toLowerCase());
               });
-              console.log("FilterOuput", filterOutput);
+              // console.log("FilterOuput", filterOutput);
               setFilterData(filterOutput);
             }}
           >
