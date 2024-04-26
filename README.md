@@ -166,6 +166,8 @@ note:
   - then the render() component is called
   - once the mounting of a component is finished then the componentDidMount is called
 
+  ![lifeCycle](![alt text](https://i0.wp.com/reactjsguru.com/wp-content/uploads/2022/06/Screenshot-360.webp?resize=1024%2C640&ssl=1))
+
   # Parent-Child relationship calling lifeCycle
 
   - parent class is called and instance is created
