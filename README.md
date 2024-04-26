@@ -166,6 +166,10 @@ note:
   - then the render() component is called
   - once the mounting of a component is finished then the componentDidMount is called
 
+  # diagram lifeCycle
+
+  (![clasComponentLifeCycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+
   ![lifeCycle](![alt text](https://i0.wp.com/reactjsguru.com/wp-content/uploads/2022/06/Screenshot-360.webp?resize=1024%2C640&ssl=1))
 
   # Parent-Child relationship calling lifeCycle
@@ -183,8 +187,19 @@ note:
 
       # Basic concept
       - React has two phases:
+        # Mounting Phase
          - Render Phase() : constructor is called and batch the Render of the children
          - commit Phase() : Once the Render phase is completed, It means that find out the diff of virtual DOMs, Now the Dom UPdated in a Single Bactch, then componentDidMount() is called after updating the Dom.
+
+        # Updating phase
+        - once the API is called and the setState variable
+        - after the batch render()
+        - componentDidUpdate is called
+
+        # Unmounting Phase
+        - when we leave the component( changing the page) and go to another component
+        - then componentWillUnmount is called
+        - clean Up the mess Hahhaahhahah!
 
       # parent have two children
       - Parent Constructor
@@ -199,8 +214,9 @@ note:
 
   # Note:
 
-  - DidComponentMount() ===== useEffect()
+  - componentDidMount()
   - use for APIs call
+  - never ever compare the lifeCycle of Class Component with Functional Component
 
 # Functional vs Class
 

@@ -32,8 +32,8 @@ class UserClass extends React.Component {
     // console.log(name, " render()");
     return (
       <div className="user-container">
-        <h2>Name: {name}</h2>
-        <h3>Location: {location}</h3>
+        <h2>Name: {name || "Manan Azhar"}</h2>
+        <h3>Location: {location || "Islamabad"}</h3>
         <h4>Contact: mooni@gmail.com</h4>
       </div>
     );
