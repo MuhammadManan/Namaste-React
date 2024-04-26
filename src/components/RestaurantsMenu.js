@@ -23,7 +23,7 @@ const RestaurantsMenu = () => {
     // );
 
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setResInfo(json.data);
   };
 
@@ -36,7 +36,7 @@ const RestaurantsMenu = () => {
   //   console.log(name + "" + city);
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-  console.log("itemCards: ", itemCards);
+  // console.log("itemCards: ", itemCards);
 
   return (
     <div className="menu-container">

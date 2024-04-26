@@ -177,6 +177,24 @@ note:
   - once the child mounting is complete then child DidComponentMount is called
   - At last, the Parent DidComponentMount() is called
 
+  # Parent have multiple children lifeCycle
+
+      # Basic concept
+      - React has two phases:
+         - Render Phase() : constructor is called and batch the Render of the children
+         - commit Phase() : Once the Render phase is completed, It means that find out the diff of virtual DOMs, Now the Dom UPdated in a Single Bactch, then componentDidMount() is called after updating the Dom.
+
+      # parent have two children
+      - Parent Constructor
+      - Parent render()
+      - First (Class)  Constructor
+      - First (Class)  render()
+      - Second (Class)  Constructor
+      - Second (Class)  render()
+      - First (Class)  ComponentDidMount
+      - Second (Class)  ComponentDidMount
+      - Parent componentDidMount
+
   # Note:
 
   - DidComponentMount() ===== useEffect()
