@@ -168,7 +168,7 @@ note:
 
   # diagram lifeCycle
 
-  (![clasComponentLifeCycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+  (![clasComponentLifeCycle](/src/utils/images/ClassComponentLifeCycle.png)))
 
   ![lifeCycle](![alt text](https://i0.wp.com/reactjsguru.com/wp-content/uploads/2022/06/Screenshot-360.webp?resize=1024%2C640&ssl=1))
 
