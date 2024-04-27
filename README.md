@@ -237,3 +237,25 @@ note:
 - make the code more readable
 - make the code more modular
 - make the code more useable
+
+# Optimize Performance the web/app
+
+# chunking/ code spliting/ Dynamic Bundling
+
+- To break down the app file, into smaller logical (separation) chunk of the bundle at the browser
+- A bundled should have enough code for a major feature in a website.
+- Means it's more than one js file (split your website into smaller bundle)
+- otherwise, website take a lot of time to load and performance may low.
+- because, request for a JS which is too heavy if it is single bundle and take too much to load on the browser.
+
+# Lazy Loading for distribute the bundling / dynamic import
+
+- we will not load everything directly, we do lazy loading when required.
+- It'll not load code for everything such as there is component for another module which has a lot of children in it.
+- So, whenever I go to that component page, then the code of that component should come up.
+- the whole process is also called **on demand loading**
+- and use the Suspense component provided by react, it is help us not to suspend the code on demand.
+- when we on demand code, it takes time and react too fast. so react doesn't find a code and through the error suspend the rendering of UI.
+- That's why wrap the component in the suspense.
+  code :
+  const ComponentName = Lazy(()=> import("Path of the component"))
