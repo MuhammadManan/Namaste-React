@@ -259,3 +259,10 @@ note:
 - That's why wrap the component in the suspense.
   code :
   const ComponentName = Lazy(()=> import("Path of the component"))
+
+# advantage of Tailwind css
+
+- it only include the css which is required in a bundler of our code
+- only the css that are using, it is major advantage
+- It's very light weight such as it only include the class once use in the whole code like if m-4 class is used then, it come up only one time in the bundling of code.
+- keep the bundle size small

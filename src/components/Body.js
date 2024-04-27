@@ -41,19 +41,19 @@ export const Body = () => {
 
   if (internetStatus === false)
     return (
-      <>
-        <h1>Looks like you're Offline!!</h1>
-        <h2>Please check your internet connection.!</h2>
-      </>
+      <div className="m-8 border-2 border-gray-700 rounded-xl p-2">
+        <h1 className="text-2xl font-semibold">Looks like you're Offline!!</h1>
+        <h2 className="font-medium">Please check your internet connection.!</h2>
+      </div>
     );
 
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body-container">
-      <div className="filter-container">
+      <div className="filter-container flex justify-between">
         <button
-          className="topRate-Btn"
+          className="topRate-Btn ml-8 border-2 border-gray-600 rounded-lg p-2 font-semibold"
           onClick={() => {
             const filteredList = restaurantList.filter(
               (res) => res.info.avgRating > 4
@@ -64,19 +64,19 @@ export const Body = () => {
         >
           Top Rated Restaurant
         </button>
-        <div className="search-container">
+        <div className="search-container mr-8 py-2 ">
           <input
             type="text"
             placeholder="Enter Restaurant"
             maxLength={20}
-            className="search-bar"
+            className="search-bar border-2 border-gray-800 mr-2 p-1 rounded"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn"
+            className="search-btn border-2 border-gray-600 p-1 rounded-lg"
             onClick={() => {
               const filterOutput = restaurantList.filter((res) => {
                 // console.log(res?.info?.name);
@@ -92,7 +92,7 @@ export const Body = () => {
           </button>
         </div>
       </div>
-      <div className="res-container">
+      <div className="res-container mt-3 mr-8 ml-8 flex flex-wrap">
         {filterData.map((restaurant) => (
           <Link
             key={restaurant.info.id}

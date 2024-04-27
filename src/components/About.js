@@ -16,11 +16,11 @@ class About extends Component {
   render() {
     // console.log("Parent render()");
     return (
-      <div className="about-container">
-        <h1>About Us</h1>
+      <div className="about-container m-8 border-2 border-gray-700 rounded-xl p-3">
+        <h1 className="text-2xl font-semibold">About Us</h1>
         <h2>We're really getting healthy!</h2>
         {/* <User name={"Hanan Azhar (functional)"} /> */}
-        <UserClass name={"Manan (Class)"} location={"Islamabad"} />;
+        <UserClass name={"Manan (Class)"} location={"Islamabad"} />
       </div>
     );
   }

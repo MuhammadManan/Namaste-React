@@ -19,7 +19,7 @@ class UserClass extends React.Component {
   async componentDidMount() {
     // console.log(this.props.name, " ComponentDidMount");
 
-    const data = await fetch("https://api.github.com/users/akshaymarch7");
+    const data = await fetch("https://api.github.com/users/muhammadmanan");
     const json = await data.json();
     // console.log(json);
 
@@ -29,11 +29,12 @@ class UserClass extends React.Component {
   }
 
   render() {
-    const { name, location } = this.state.userInfo;
+    const { login, id, location } = this.state.userInfo;
     // console.log(name, " render()");
     return (
       <div className="user-container">
-        <h2>Name: {name || "Manan Azhar"}</h2>
+        <h2>Name: {login || "Manan Azhar"}</h2>
+        <h2>UserId: {id || "null"}</h2>
         <h3>Location: {location || "Islamabad"}</h3>
         <h4>Contact: mooni@gmail.com</h4>
       </div>
