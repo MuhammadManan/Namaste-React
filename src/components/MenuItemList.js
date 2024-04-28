@@ -6,7 +6,7 @@ const MenuItemList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.card.info.id}
-          className="m-2 p-2 border-b-2 border-rose-200 text-left flex justify-between"
+          className="m-2 p-2 border-b-2 border-rose-200 text-left flex justify-between hover:bg-slate-300 hover:rounded"
         >
           <div className="w-9/12">
             <div className="text-lg font-medium py-2">

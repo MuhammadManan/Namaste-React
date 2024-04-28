@@ -42,7 +42,7 @@ export const Body = () => {
     <div className="body-container">
       <div className="filter-container flex justify-between">
         <button
-          className="topRate-Btn ml-8 border-2 border-gray-600 rounded-lg p-2 font-semibold hover:bg-rose-200 hover:text-rose-400"
+          className="topRate-Btn ml-8 bg-rose-100 border-2 border-gray-600 rounded-lg p-2 font-semibold hover:bg-rose-200 hover:text-rose-400"
           onClick={() => {
             const filteredList = restaurantList.filter(
               (res) => res.info.avgRating > 4
@@ -64,7 +64,7 @@ export const Body = () => {
             }}
           />
           <button
-            className="search-btn border-2 border-gray-600 p-1  hover:bg-rose-200 hover:text-rose-400 rounded-lg"
+            className="search-btn border-2 border-gray-600 p-1 bg-rose-100 hover:bg-rose-200 hover:text-rose-400 rounded-lg"
             onClick={() => {
               const filterOutput = restaurantList.filter((res) => {
                 return res?.info?.name
