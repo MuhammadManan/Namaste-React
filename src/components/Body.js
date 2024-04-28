@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withDiscountLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer.js";
 import { useState, useEffect } from "react";
 import { api_URL } from "../utils/constants.js";
@@ -9,6 +9,9 @@ export const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardDiscount = withDiscountLabel(RestaurantCard);
+  console.log("restaurant: ", restaurantList);
 
   useEffect(() => {
     fetchData();
@@ -92,13 +95,18 @@ export const Body = () => {
           </button>
         </div>
       </div>
-      <div className="res-container mt-3 mr-8 ml-8 flex flex-wrap">
+      <div className="res-container mt-3 mr-8 ml-8 flex flex-wrap relative">
         {filterData.map((restaurant) => (
           <Link
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {JSON.stringify(restaurant?.info?.aggregatedDiscountInfoV2) ===
+            "{}" ? (
+              <RestaurantCard resData={restaurant} />
+            ) : (
+              <RestaurantCardDiscount resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

@@ -7,7 +7,7 @@ const RestaurantCard = (props) => {
     resData?.info;
   const { deliveryTime } = resData?.info?.sla;
   return (
-    <div className="resCard-container bg-gray-100 mr-1 mt-2 w-64 max-h-full p-2 hover:bg-gray-400 hover:border-2 hover:rounded-lg">
+    <div className="resCard-container bg-rose-50 mr-1 mt-2 w-64 max-h-full p-2 hover:bg-rose-200 hover:border-2 hover:rounded-lg">
       <div className="image-container">
         <img
           className="w-60 rounded"
@@ -26,6 +26,24 @@ const RestaurantCard = (props) => {
       </div>
     </div>
   );
+};
+
+// Higher Order Component
+// input - RestaurantCard => output - RestaurantCard with discount label on it
+
+export const withDiscountLabel = (RestaurantCard) => {
+  return (props) => {
+    const { header = " ", subHeader = " " } =
+      props?.resData?.info?.aggregatedDiscountInfoV3 || {};
+    return (
+      <div>
+        <h3 className="absolute mt-1 ml-1 w-36 h-12 rounded-lg bg-gray-200 opacity-90 text-slate-900 size-2 font-semibold">
+          {header + " " + subHeader}
+        </h3>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;

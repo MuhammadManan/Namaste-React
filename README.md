@@ -266,3 +266,7 @@ note:
 - only the css that are using, it is major advantage
 - It's very light weight such as it only include the class once use in the whole code like if m-4 class is used then, it come up only one time in the bundling of code.
 - keep the bundle size small
+
+# Higher Order component
+
+- it is the function that takes a component inside and enhances that component and (return back a new component) returns a component
