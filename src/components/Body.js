@@ -11,33 +11,19 @@ export const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCardDiscount = withDiscountLabel(RestaurantCard);
-  console.log("restaurant: ", restaurantList);
-
   useEffect(() => {
     fetchData();
-    // console.log("useEffect");
   }, []);
 
   const fetchData = async () => {
     const restaurantApiData = await fetch(api_URL);
     const data = await restaurantApiData.json();
-    // console.log(data);
     setRestaurantList(
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilterData(
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    // console.log(
-    //   "data:",
-    //   data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    // );
-    // const dataCheck =
-    //   data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-    //     ?.restaurants;
-    // for (let i = 0; i < dataCheck.length; i++) {
-    //   console.log(`Data ${i} : ${dataCheck[i]?.info?.name} `);
-    // }
   };
 
   const internetStatus = useOnlineStatus();
@@ -56,12 +42,11 @@ export const Body = () => {
     <div className="body-container">
       <div className="filter-container flex justify-between">
         <button
-          className="topRate-Btn ml-8 border-2 border-gray-600 rounded-lg p-2 font-semibold"
+          className="topRate-Btn ml-8 border-2 border-gray-600 rounded-lg p-2 font-semibold hover:bg-rose-200 hover:text-rose-400"
           onClick={() => {
             const filteredList = restaurantList.filter(
               (res) => res.info.avgRating > 4
             );
-            // console.log(filteredList);
             setFilterData(filteredList);
           }}
         >
@@ -72,22 +57,20 @@ export const Body = () => {
             type="text"
             placeholder="Enter Restaurant"
             maxLength={20}
-            className="search-bar border-2 border-gray-800 mr-2 p-1 rounded"
+            className="search-bar border-2 border-gray-800 mr-2 p-1 rounded active:bg-rose-100"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn border-2 border-gray-600 p-1 rounded-lg"
+            className="search-btn border-2 border-gray-600 p-1  hover:bg-rose-200 hover:text-rose-400 rounded-lg"
             onClick={() => {
               const filterOutput = restaurantList.filter((res) => {
-                // console.log(res?.info?.name);
                 return res?.info?.name
                   .toLowerCase()
                   .includes(searchText.toLowerCase());
               });
-              // console.log("FilterOuput", filterOutput);
               setFilterData(filterOutput);
             }}
           >

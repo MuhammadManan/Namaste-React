@@ -15,6 +15,13 @@ const RestaurantsMenu = () => {
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
+  const ItemCategory =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+
   return (
     <div className="menu-container m-8 border-2 border-gray-700 rounded-xl p-2">
       <h1 className="text-2xl font-semibold">{name}</h1>

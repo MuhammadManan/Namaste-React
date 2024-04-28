@@ -270,3 +270,7 @@ note:
 # Higher Order component
 
 - it is the function that takes a component inside and enhances that component and (return back a new component) returns a component
+
+# Accordion UI
+
+- it is used to make the Restaurant menu.
