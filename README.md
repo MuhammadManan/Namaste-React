@@ -274,3 +274,4 @@ note:
 # Accordion UI
 
 - it is used to make the Restaurant menu.
+- each accordion category has a header(title) and body(where data come) and each one is collapsible
