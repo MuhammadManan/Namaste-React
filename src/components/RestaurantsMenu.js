@@ -22,17 +22,20 @@ const RestaurantsMenu = () => {
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
-  console.log(ItemCategories);
-
+  // console.log(ItemCategories);
   return (
     <div className="menu-container text-center m-8 p-2">
-      <h1 className="text-2xl my-3 font-bold">{name}</h1>
+      <h1 className="text-3xl my-3 font-bold">
+        <span className=" hover:bg-rose-200 hover:rounded-lg p-2">{name}</span>
+      </h1>
       <p className="font-semibold text-lg">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
       {ItemCategories.map((item) => (
-        <RestaurantCatagory data={item?.card?.card} />
+        <RestaurantCatagory
+          key={item?.card?.card?.title}
+          data={item?.card?.card}
+        />
       ))}
     </div>
   );
