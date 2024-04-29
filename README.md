@@ -275,3 +275,9 @@ note:
 
 - it is used to make the Restaurant menu.
 - each accordion category has a header(title) and body(where data come) and each one is collapsible
+
+# controlled & uncontrolled component
+
+- it's a jargon Philophisy
+- if a component is controlled by its' parent then it's controlled component and vice versa.
+- it's aslo called **lifting state Up**
