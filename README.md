@@ -298,3 +298,8 @@ note:
   **Class component**
 - In class based component, we access the context data using the consumer keyword superpower.
 - and React take care of it.
+  **Provider** overide the default value of the Context,
+- Provider do it and it's very performant.
+- provide the dynamic value
+- we just need to wrap the component in the Context.Provider
+- wrap it into my whole app.
