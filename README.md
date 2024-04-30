@@ -281,3 +281,17 @@ note:
 - it's a jargon Philophisy
 - if a component is controlled by its' parent then it's controlled component and vice versa.
 - it's aslo called **lifting state Up**
+
+# props drilling
+
+- React is a one way data stream
+- Data pass from parent to childrens.
+- There is a problem with props drilling because in between child does'nt need that props and the leave level child component only use it. then how much level we pass the data, it bad practice
+- To avoid it,we use React Context
+
+# React Context
+
+- It's a place where we store our data, use the data from anywhere
+- keep the data in the central(central global object) place.
+- createContext: to ceate the context
+- useContext: to use the context
