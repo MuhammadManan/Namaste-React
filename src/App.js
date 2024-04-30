@@ -22,9 +22,14 @@ const MyApp = () => {
     setUserName(data.name);
   }, []);
   return (
+    // default value
     <UserContext.Provider value={{ loggedInUser: userName }}>
+      {/* micky  */}
       <div className="main-container">
-        <Header />
+        <UserContext.Provider value={{ loggedInUser: "John" }}>
+          {/* John */}
+          <Header />
+        </UserContext.Provider>
         <Outlet />
       </div>
     </UserContext.Provider>
