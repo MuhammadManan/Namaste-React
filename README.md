@@ -295,3 +295,6 @@ note:
 - keep the data in the central(central global object) place.
 - createContext: to ceate the context
 - useContext: to use the context
+  **Class component**
+- In class based component, we access the context data using the consumer keyword superpower.
+- and React take care of it.
