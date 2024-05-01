@@ -1,14 +1,16 @@
 import RestaurantCard, { withDiscountLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer.js";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { api_URL } from "../utils/constants.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
+import UserContext from "../utils/UserContext.js";
 
 export const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   const RestaurantCardDiscount = withDiscountLabel(RestaurantCard);
   useEffect(() => {
@@ -41,17 +43,30 @@ export const Body = () => {
   ) : (
     <div className="body-container">
       <div className="filter-container flex justify-between">
-        <button
-          className="topRate-Btn ml-8 bg-rose-100 border-2 border-gray-600 rounded-lg p-2 font-semibold hover:bg-rose-200 hover:text-rose-400"
-          onClick={() => {
-            const filteredList = restaurantList.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setFilterData(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
+        <div className="h-16 mt-2 flex gap-20 ">
+          <button
+            className="topRate-Btn ml-8 bg-rose-100 border-2 border-gray-600 rounded-lg p-2 font-semibold hover:bg-rose-200 hover:text-rose-400"
+            onClick={() => {
+              const filteredList = restaurantList.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setFilterData(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+          <div className="mt-3 mr-3">
+            <label className="p-2 text-l mr-2 rounded-md bg-rose-100 border-2 border-slate-700 font-semibold">
+              User{" "}
+            </label>
+            <input
+              className="border-2 rounded-lg border-gray-900 p-2"
+              value={loggedInUser}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
+        </div>
+
         <div className="search-container mr-8 py-2 ">
           <input
             type="text"
